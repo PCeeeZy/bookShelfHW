@@ -4,6 +4,7 @@ const db = require('../models');
 // available methods that are requested by /routes
 module.exports = {
     findAll: (req, res) => {
+        console.log(`getting find all`);
         db.Book
             .find(req.query)
             .sort({ date: -1 })
@@ -17,10 +18,13 @@ module.exports = {
             .catch(err => res.status(422).json(err));
     },
     create: (req, res) => {
+        console.log(`inserting a new book`);
+        console.log(req.body);
         db.Book
             .create(req.body)
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
+        console.log(`book inserted successfully`);
     },
     update: (req, res) => {
         db.Book

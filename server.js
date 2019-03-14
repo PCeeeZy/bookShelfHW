@@ -20,6 +20,8 @@ if (process.env.NODE_ENV === 'production') {
 // app routes
 app.use(routes);
 
+console.log(`hey this is the server.js`);
+
 // mongoDB connection
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/googlebooks');
 

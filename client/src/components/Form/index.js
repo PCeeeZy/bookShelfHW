@@ -32,3 +32,41 @@ export const FormBtn = (props) => {
         </button>
     );
 };
+
+//djdkfdkjflajfldjda
+const Form = ({
+    query, handleInputChange, handleFormSubmit
+}) => {
+    return (
+        <form>
+            <div className='form-group'>
+                <label htmlFor='Query'>
+                    <strong>
+                        Book
+                    </strong>
+                </label>
+                <input
+                    className='form-control'
+                    id='Title'
+                    value={query}
+                    type='text'
+                    name='query'
+                    onChange={handleInputChange}
+                    placeholder='Enter a Book to Search Here'
+                />
+            </div>
+            <div className='pull-right'>
+                <button
+                    className='btn btn-lg btn-danger float-right'
+                    type='submit'
+                    onClick={handleFormSubmit}
+                >
+                Search Book by Title
+                </button>
+            </div>
+        </form>
+        
+    )
+}
+
+export default Form;

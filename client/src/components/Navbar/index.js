@@ -1,12 +1,27 @@
-import React from "react";
+import React from 'react';
+import {Link} from 'react-router-dom';
+import './style.css';
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-      <a className="navbar-brand" href="/">
+    <nav className='navbar navbar-expand-lg navbar-dark bg-primary'>
+      <Link className='navbar-brand' to='/'>
         React Reading List
-      </a>
+      </Link>
+      <ul className='navbar-nav'>
+        <li className='nav-item'>
+          <Link to='/'>
+            Search  
+          </Link>
+        </li>
+        <li className='nav-item'>
+          <Link to='/saved'>
+            Saved
+          </Link>
+        </li>
+      </ul>
     </nav>
+  
   );
 }
 

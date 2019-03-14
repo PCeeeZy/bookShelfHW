@@ -2,7 +2,7 @@
 import React from 'react';
 import './style.css';
 
-const Jumbotron = ({children}) => {
+const Jumbotron = ({ children }) => {
     return (
         <div className='jumbotron'>
             {children}
